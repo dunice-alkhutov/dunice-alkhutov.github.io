@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Happy new year!"
-subtitle:   "My congrats."
-date:       2017-01-01 12:00:00
+title:      "Python migrations"
+subtitle:   "Migrating prjects from X to Python"
+date:       2017-03-22 12:00:00
 author:     "Alexey A."
 header-img: "img/post-bg-01.jpg"
 ---
