@@ -1,0 +1,141 @@
+---
+layout: page
+title: "Projects"
+description: "My personal page"
+---
+
+<div class="row">
+    <div class="col-sm-6 preview-desc" data-toggle="modal" data-target="#ngxbio-modal">
+        <div class="jumbotron text-center project-item-wrapper">
+            <img src="" alt=""/>
+            <div class="project-item-box">
+                <h2>NGXBIO</h2>
+                <h5>Medical service</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 preview-desc" data-toggle="modal" data-target="#mimic-modal">
+        <div class="jumbotron text-center project-item-wrapper">
+            <img src="" alt=""/>
+            <div class="project-item-box">
+                <h2>Mimicprint</h2>
+                <h5>Printing for business</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 preview-desc" data-toggle="modal" data-target="#eve-modal">
+        <div class="jumbotron text-center project-item-wrapper">
+            <img src="" alt=""/>
+            <div class="project-item-box">
+                <h2>EVE(Unetlab)</h2>
+                <h5>Visual display and the control topology of computer networks</h5>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="Glad to see you">
+        <h2 class="post-title">{{ post.title }}</h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+    </a>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+<!-- MODALS -->
+<div class="modal fade" id="ngxbio-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">NGXBIO</h4>
+      </div>
+      <div class="modal-body">
+        <img src="/img/ngxbio.png" alt="Mimicprint">
+        <div class="text-center">
+            <a href="hgxbio.com"><h2>www.ngxbio.com</h2></a>
+        </div>
+        <div class="row text-center">
+            <img class="technology-logo" src="/img/python.png" alt="python">
+            <img class="technology-logo" src="/img/flask.png" alt="flask">
+            <img class="technology-logo" src="/img/js.png" alt="js">
+            <img class="technology-logo" src="/img/mysql.png" alt="mysql">
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="mimic-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Mimicprint</h4>
+      </div>
+      <div class="modal-body">
+        <img src="/img/mimicprint.png" alt="Mimicprint">
+        <div class="text-center">
+            <a href="hgxbio.com"><h2>www.ngxbio.com</h2></a>
+        </div>
+        <div class="row text-center">
+            <img class="technology-logo" src="/img/python.png" alt="python">
+            <img class="technology-logo" src="/img/django.png" alt="django">
+            <img class="technology-logo" src="/img/js.png" alt="js">
+            <img class="technology-logo" src="/img/mysql.png" alt="mysql">
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="eve-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">EVE(Unetlab)</h4>
+      </div>
+      <div class="modal-body">
+        <img src="/img/unetlab.png" alt="Mimicprint">
+        <div class="text-center">
+            <a href="unetlab.com"><h2>www.unetlab.com</h2></a>
+        </div>
+        <div class="row text-center">
+            <img class="technology-logo" src="/img/js.png" alt="js">
+            <img class="technology-logo" src="/img/jquery.png" alt="jquery">
+            <img class="technology-logo" src="/img/bootstrap.png" alt="bootstrap">
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>  
+    </div>
+  </div>
+</div>
